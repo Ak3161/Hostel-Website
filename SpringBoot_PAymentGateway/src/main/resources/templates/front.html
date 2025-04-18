@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gurukrupa Hostel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fffcf2;
+    }
+
+    .navbar {
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-left img {
+      width: 50px;
+      height: auto;
+      margin-right: 10px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo-text {
+      color: #8C7353;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .navbar-center {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .navbar-center a {
+      color: #8C7353;
+      text-decoration: none;
+      padding: 14px 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .navbar-center a:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 100px auto 0;
+      padding: 20px;
+    }
+
+    .box-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 40%;
+    }
+
+    .box {
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .banner-img {
+      width: 50%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .about {
+      background-color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .about h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .about p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .about ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    .about ul li {
+      margin: 10px 0;
+      color: #555;
+      font-size: 16px;
+    }
+
+    #facility {
+      background-color: #e0e0e0;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #facility h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    #facility ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #facility ul li {
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    #facility ul li strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #8C7353;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      z-index: 1000;
+    }
+
+    .whatsapp-button img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+	
+	.image-gallery {
+	  max-width: 1200px;
+	  margin: 40px auto;
+	  padding: 20px;
+	}
+
+	.card-container {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 20px;
+	  justify-content: center;
+	}
+
+	.card {
+	  background-color: #fff;
+	  border-radius: 10px;
+	  overflow: hidden;
+	  width: 250px;
+	  height: 200px;
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+	.card img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	}
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-left">
+      
+      <span class="logo-text">Gurukrupa </span>
+    </div>
+    <div class="navbar-center">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="index.html">Payment</a>
+      <a href="#facility">Facility</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <img src="/img/pic.webp" alt="Banner Image" class="banner-img" />
+    <div class="box-container">
+      <div class="box">
+        <h3>Modern Student Housing</h3>
+        <p>
+          Fully furnished rooms with high-speed internet and 24/7 security. Ideal
+          for students looking for comfort and convenience.
+        </p>
+      </div>
+      <div class="box">
+        <h3>Co-living for Professionals</h3>
+        <p>
+          Premium shared living spaces with modern amenities, perfect for young
+          professionals seeking a dynamic community.
+        </p>
+      </div>
+      <div class="box">
+        <h3>Managed Apartments</h3>
+        <p>
+          Spacious and well-maintained apartments with housekeeping and
+          maintenance services for a hassle-free living experience.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add this section right after the .main-container and before the #about section -->
+
+  <div class="image-gallery">
+    <h2 style="text-align:center; margin-top: 50px; color:#333;">Gallery</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="/img/gal1.webp" alt="Gallery Image 1" />
+      </div>
+      <div class="card">
+        <img src="/img/gal2.jpg" alt="Gallery Image 2" />
+      </div>
+      <div class="card">
+        <img src="/img/gal3.webp" alt="Gallery Image 3" />
+      </div>
+      <div class="card">
+        <img src="/img/gal4.webp" alt="Gallery Image 4" />
+      </div>
+    </div>
+  </div>
+
+
+  <div id="about" class="about">
+    <h2>About Gurukrupa Hostel</h2>
+    <p>
+      Gurukrupa Hostel offers a unique and comfortable living experience for
+      students and working professionals in a homely environment...
+    </p>
+    <h3>Key Features:</h3>
+    <ul>
+      <li><strong>Fully Furnished Rooms:</strong> Each room is equipped...</li>
+      <li><strong>High-Speed Internet:</strong> Stay connected...</li>
+      <li><strong>24/7 Security:</strong> Our hostel provides...</li>
+      <li><strong>Common Amenities:</strong> Enjoy access to a...</li>
+      <li><strong>Proximity to Public Transport:</strong> Conveniently located...</li>
+      <li><strong>Healthy Meal Options:</strong> Nutritious meals are available...</li>
+    </ul>
+    <h3>Why Choose Gurukrupa Hostel?</h3>
+    <p>
+      Gurukrupa Hostel stands out due to its commitment to providing...
+    </p>
+  </div>
+
+  <div id="facility" class="facility">
+    <h2>Our Facilities</h2>
+    <ul>
+      <li><strong>24/7 Security</strong><p>Round-the-clock security...</p></li>
+      <li><strong>High-Speed Internet</strong><p>Fast and reliable Wi-Fi...</p></li>
+      <li><strong>Laundry Services</strong><p>On-site laundry facilities...</p></li>
+      <li><strong>Common Kitchen</strong><p>A fully equipped kitchen...</p></li>
+      <li><strong>Study Room</strong><p>A quiet and conducive...</p></li>
+      <li><strong>Recreational Area</strong><p>A space for relaxation...</p></li>
+      <li><strong>Gym</strong><p>Stay fit with our on-site gym facilities.</p></li>
+      <li><strong>Parking</strong><p>Dedicated parking space...</p></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Gurukrupa Hostel. All rights reserved.</p>
+    <a href="#terms">Terms of Service</a>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#faq">FAQ</a>
+    <a href="/sitemap.xml">Sitemap</a>
+    <div style="margin-top: 20px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d236.0216071943581!2d75.31544223106039!3d19.86759324874229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1743598360718!5m2!1sen!2sin"
+        width="400"
+        height="300"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <p>Contact: 9604190972, 9423741775</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/+918010462296" target="_blank" class="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+  </a>
+</body>
+</html>

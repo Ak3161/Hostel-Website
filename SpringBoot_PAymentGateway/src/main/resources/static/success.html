@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <style>
+        /* General Reset */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Success Message Box */
+        .success-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        /* Title */
+        .success-title {
+            color: green;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Message */
+        .success-message {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Order Status */
+        .order-status {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .status-confirmed {
+            color: green;
+        }
+
+        /* Email Message */
+        .email-message {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Button */
+        .home-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <h2 class="success-title">Payment Successful</h2>
+        <p class="success-message">Thank you! Your payment has been processed successfully.</p>
+        <p class="order-status">Order Status: <span class="status-confirmed">CONFIRMED</span></p>
+        <p class="email-message">You will receive a confirmation email shortly.</p>
+        <a href="#" class="home-button">Go to Homepage</a>
+    </div>
+</body>
+</html>
